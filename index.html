@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://kit.fontawesome.com/b085ddb7bd.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <p>Bookshelf<span>App</span></p>
+      </div>
+      <div class="search-bar">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Enter untuk cari buku"
+        />
+        <img src="search.png" width="32px" height="32px" />
+      </div>
+    </header>
+    <main>
+      <section class="input-book">
+        <h3>Masukkan Data Buku</h3>
+        <form id="inputBook">
+          <div class="input-box">
+            <input type="text" class="input" id="judul" required />
+            <label>Judul</label>
+          </div>
+          <div class="input-box">
+            <input type="text" class="input" id="penulis" required />
+            <label>Penulis</label>
+          </div>
+          <div class="input-box">
+            <input type="text" class="input" id="tahun" required />
+            <label>Tahun</label>
+          </div>
+          <div class="check-box">
+            <input type="checkbox" id="check" />
+            <label for="check">Selesai dibaca</label>
+          </div>
+          <button type="submit" class="submit">Tambah buku ke rak</button>
+        </form>
+      </section>
+      <section class="right">
+        <section class="belum">
+          <h3>Belum</h3>
+          <div class="list" id="incomplete"></div>
+        </section>
+        <section class="selesai">
+          <h3>Selesai</h3>
+          <div class="list" id="complete"></div>
+        </section>
+      </section>
+    </main>
+    <div class="modal">
+      <div class="delete">
+        <img src="alert.png" alt="alert" />
+        <div class="confirm-delete">
+          <p>Apakah anda ingin menghapus buku?</p>
+          <div class="btn-group">
+            <button class="btn-hapus">Ya</button>
+            <button class="btn-cancel">Batal</button>
+          </div>
+        </div>
+      </div>
+      <div class="success">
+        <img src="success.png" alt="success" />
+        <div class="confirm-ok">
+          <p>Berhasil menghapus buku</p>
+          <button class="btn-cancel">OK</button>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
